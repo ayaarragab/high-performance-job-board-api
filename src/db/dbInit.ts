@@ -52,7 +52,8 @@ const dbTablesInit = async (sql: Sql) => {
         salary_min INTEGER CHECK (salary_min <= salary_max),
         status job_status NOT NULL DEFAULT 'open',
         remote_type job_remote_type NOT NULL,
-        location TEXT NOT NULL,
+        country TEXT NOT NULL,
+        city TEXT NOT NULL,
         created_at TIMESTAMPTZ NOT NULL DEFAULT CURRENT_TIMESTAMP      
       )
     `;
